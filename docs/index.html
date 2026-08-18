@@ -141,6 +141,8 @@
     color: var(--text-muted);
   }
   footer a { color: var(--blue); text-decoration: none; }
+  .banner-link { display: block; }
+  .banner-link:active .banner { transform: scale(0.98); }
   .banner {
     display: block;
     width: 100%;
@@ -148,6 +150,13 @@
     margin: 14px auto 0;
     border-radius: 12px;
     border: 1px solid var(--border);
+    transition: transform 0.15s ease;
+  }
+  .banner-caption {
+    display: block;
+    margin: 8px 0 14px;
+    font-size: 12px;
+    color: var(--text-muted);
   }
   .spinner {
     width: 18px; height: 18px;
@@ -220,10 +229,11 @@
 
   <footer>
     자료 출처 : 경남SK드론교육원<br>
-    <img class="banner" src="images/경남SK드론교육원.jpg" alt="경남SK드론교육원 - 국토교통부 지정 전문교육기관" />
-    <br>
-    앱 제작자 : 경남SK드론교육원 26년 10기 교육생 중 한명<br><br>
-    <a href="https://github.com/souvenir-hwang/drone_test_app/releases" target="_blank" rel="noopener">GitHub에서 모든 버전 보기 ↗</a>
+    <a class="banner-link" href="tel:070-7378-8069" aria-label="경남SK드론교육원 070-7378-8069 전화 연결">
+      <img class="banner" src="images/경남SK드론교육원.jpg" alt="경남SK드론교육원 - 국토교통부 지정 전문교육기관 (누르면 070-7378-8069로 전화 연결)" />
+    </a>
+    <span class="banner-caption">이미지를 누르면 070-7378-8069로 전화 연결됩니다</span>
+    앱 제작자 : 경남SK드론교육원 26년 10기 교육생 중 한명
   </footer>
 </div>
 
