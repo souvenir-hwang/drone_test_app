@@ -14,6 +14,7 @@
     --text: #14141f;
     --text-muted: #5a5a6e;
     --border: #e3e4ee;
+    --danger: #d32020;
   }
   @media (prefers-color-scheme: dark) {
     :root {
@@ -24,6 +25,7 @@
       --text: #f0f0f5;
       --text-muted: #a3a3b5;
       --border: #2c2c38;
+      --danger: #ff6b6b;
     }
   }
   * { box-sizing: border-box; }
@@ -96,6 +98,18 @@
     font-size: 13px;
     color: var(--text-muted);
     margin: 10px 0 0;
+  }
+  .ios-warning {
+    text-align: center;
+    margin: 16px 0 0;
+    padding: 12px 14px;
+    border-radius: 12px;
+    background: rgba(211, 32, 32, 0.08);
+    border: 1px solid rgba(211, 32, 32, 0.35);
+    color: var(--danger);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.5;
   }
   section {
     margin-top: 40px;
@@ -201,6 +215,8 @@
     <span id="btnLabel">다운로드 링크 불러오는 중…</span>
   </a>
   <p class="file-size" id="fileSize"></p>
+
+  <p class="ios-warning">안드로이드 전용 앱입니다. iOS(아이폰·아이패드)에서는 설치할 수 없습니다.</p>
 
   <section>
     <h2>주요 기능</h2>
